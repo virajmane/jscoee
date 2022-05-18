@@ -4,7 +4,24 @@ app = Flask(__name__)
 app.config["FILES"] = "/static/"
 @app.route("/")
 def index():
-    return "Hello World!"
+    return """
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Links</h1>
+
+<p><a href="https://jscoee.herokuapp.com/tcp">https://jscoee.herokuapp.com/tcp</a></p>
+<p><a href="https://jscoee.herokuapp.com/udp">https://jscoee.herokuapp.com/udp</a></p>
+<p><a href="https://jscoee.herokuapp.com/election">https://jscoee.herokuapp.com/election</a></p>
+<p><a href="https://jscoee.herokuapp.com/mpi">https://jscoee.herokuapp.com/mpi</a></p>
+
+
+
+</body>
+</html>
+
+    """
 
 @app.route("/udp")
 def udp():
